@@ -12,5 +12,13 @@ class Newsletter < ActiveRecord::Base
   def url_for_issue(issue)
     p URI("#{url}#{issues_path}/#{issue}")
   end
+
+  def as_json(options = {})
+    options.merge!({ 
+      only: [:id, :name, :url, :issues_path],
+      methods: [:issues]
+    })
+    super
+  end
 end
 
