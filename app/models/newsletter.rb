@@ -1,6 +1,6 @@
 class Newsletter < ActiveRecord::Base
-  RubyweeklyParser
-  GolangweeklyParser
+  has_many :issues
+
   def parsed_content_for_issue(issue)
     Raspar.parse(url, content_for_issue(issue))
   end

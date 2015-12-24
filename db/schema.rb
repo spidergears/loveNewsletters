@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151224110338) do
+ActiveRecord::Schema.define(version: 20151224190331) do
+
+  create_table "issues", force: :cascade do |t|
+    t.integer  "number"
+    t.string   "url"
+    t.string   "parsed_file_path"
+    t.integer  "newsletter_id"
+    t.date     "date_punblished"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  add_index "issues", ["newsletter_id"], name: "index_issues_on_newsletter_id"
 
   create_table "newsletters", force: :cascade do |t|
     t.string   "name"
