@@ -5,5 +5,13 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  %body
+  %body.container
+    .navbar.navbar-default
+      .navbar-inner
+        .container
+          %ul.nav.navbar-nav
+            %li LoveNewsletters
+            %li Ruby Weekly
+            %li Golang Weekly
+            %li iOSDev Weekly
     = yield
