@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 20151224190331) do
   create_table "issues", force: :cascade do |t|
     t.integer  "number"
     t.string   "url"
+    t.string   "raw_file_path"
     t.string   "parsed_file_path"
     t.integer  "newsletter_id"
-    t.date     "date_punblished"
+    t.date     "date_published"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

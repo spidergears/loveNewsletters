@@ -1,10 +1,10 @@
 - @newsletters.each do |newsletter|
   = newsletter.name
-- @read.each do |key, value|
-  %div= key.upcase
-  - value.each do |v|
-    %div
-      =link_to v.title, v.link
-      %div= v.desc
-      %div= v.author
-      %div= v.tags if v.tags && v.tags.length
+/ - @read.each do |key, value|
+/   %div= key.upcase
+/   - value.each do |v|
+/     %div
+/       =link_to v.title, v.link
+/       %div= v.desc
+/       %div= v.author
+/       %div= v.tags if v.tags && v.tags.length

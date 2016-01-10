@@ -4,7 +4,7 @@ class Issue < ActiveRecord::Base
   def as_json(options = {})
     options.merge!({ 
       only: [:id, :number, :url, :date_published],
-      methods: [:newsletter]
+      methods: []
     })
     super
   end
